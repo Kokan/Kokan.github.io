@@ -1,0 +1,8 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://Kokan.github.io
+title: Void Which Binds
+tagline: Virtually Anything
+description: The main goal is to create a journal about diving into the void.
+paginate: 5
