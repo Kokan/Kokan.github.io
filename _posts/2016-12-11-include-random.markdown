@@ -1,6 +1,6 @@
 ---
 published: true
-title: #include <random>
+title: `#include <random>`
 layout: post
 tags: [c++, conference, ]
 ---
@@ -11,11 +11,15 @@ At the university I had a few class, which touched the topic about random, and I
 
 ## IT
 Of course at computer science classes we had `random` number generator, or **did we** ?
+
 I had an exam, where we must wrote multi-threaded application in Ada language. It was some kind of simple producer, consumer problem, the only part I was lacking to generate a random number. I have totally forgot how to do it in Ada, and we cannot use any manual or help for the exam. At that point either I could fail the whole exam, or cheat (That is something I disliked at university.)
+
 In the end I came up with a rather error-prone random number generator:
+
 ```
   return 4;
 ```
+
 At least it compiled, and I could finish the important part of the exam.
 
 ## `<random>`
