@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: #include <random>
 layout: post
 tags: [c++, conference, ]
