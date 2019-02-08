@@ -1,0 +1,30 @@
+---
+published: false
+title: FOSDEM#19
+layout: post
+tags: [llvm, risc-v, conference, fosdem, ]
+---
+# FOSDEM
+
+This was my second year visiting this conference, and I still think many years are going to follow. If you are into Free Open Source Software this is a conference you should visit at least once, the rest is going to follow.
+
+## Day 0
+
+I had some time, so I have decided to try out volunteering as well. At least that was the initial plan. I had a few setbacks with this, as initially my flight was scheduled later than starting time of Friday's build up. Also the flight got delayed, so I could only arrive around 16:00.
+
+They have just finished all of the tasks, despite of my unsuccessful contribution I still got a volunteer t-shirt. Thanks for that.
+
+## Day 1
+
+My plan was to stick to each day to a devroom as much as I could. In the morning you could get a seat in the room, it is much harder after. There are a lot of people. Also there is no break for eating, so you should somehow come up with a schedule to ignore some presentation; or just bring food before it starts. That is what I did.
+
+The track I have decided to follow was about [risc-v](https://fosdem.org/2019/schedule/track/risc_v/). I started to follow this new ISA in a few months for now, so it seemed natural.
+
+### LLVM+Clang for RISC-V
+Materials: [https://fosdem.org/2019/schedule/event/riscvllvmclang/](https://fosdem.org/2019/schedule/event/riscvllvmclang/)
+
+The presenter had an overview about upstreaming risc-v support into llvm. There were a brief summary what kind of tasks exists for a new architecture to be supported. The current state is working, but there are missing improvements like position independent support, or outliner.
+I was surprised hearing something like outliner exists, sure it makes sense if you optimize for code size, but I have never had to deal with software where it did matter.
+A little more details about outline-ing: [J. Paquette "Reducing Code Size Using Outlining"](https://www.youtube.com/watch?v=yorld-WSOeU)
+
+
