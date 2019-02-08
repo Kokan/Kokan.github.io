@@ -1,5 +1,5 @@
 excerpt_separator: ""
-pygments: true
+highlighter: true
 markdown: kramdown
 url: http://Kokan.github.io
 title: Void Which Binds
