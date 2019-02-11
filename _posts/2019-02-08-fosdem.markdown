@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: FOSDEM#19
 layout: post
 tags: [llvm, risc-v, conference, fosdem, ]
@@ -21,10 +21,91 @@ My plan was to stick to each day to a devroom as much as I could. In the morning
 The track I have decided to follow was about [risc-v](https://fosdem.org/2019/schedule/track/risc_v/). I started to follow this new ISA in a few months for now, so it seemed natural.
 
 ### LLVM+Clang for RISC-V
-Materials: [https://fosdem.org/2019/schedule/event/riscvllvmclang/](https://fosdem.org/2019/schedule/event/riscvllvmclang/)
 
 The presenter had an overview about upstreaming risc-v support into llvm. There were a brief summary what kind of tasks exists for a new architecture to be supported. The current state is working, but there are missing improvements like position independent support, or outliner.
 I was surprised hearing something like outliner exists, sure it makes sense if you optimize for code size, but I have never had to deal with software where it did matter.
 A little more details about outline-ing: [J. Paquette "Reducing Code Size Using Outlining"](https://www.youtube.com/watch?v=yorld-WSOeU)
+
+Materials: [https://fosdem.org/2019/schedule/event/riscvllvmclang/](https://fosdem.org/2019/schedule/event/riscvllvmclang/)
+
+
+### Debian, Fedora
+
+There are people whom are intrested in risc-v from major distributions and do make the extra effort. Both debian and Fedora has regular builds. It seems to me that Fedora is in a much better place (even gdb works). When I first tried out the Fedora port it was not that usable, now I am thinking doing the experiment again.
+I would love to see syslog-ng compiling and running, and a little curiouse about testing as Criterion could be hard to bootstrap first :)
+
+Debian: [https://fosdem.org/2019/schedule/event/riscvdebian/](https://fosdem.org/2019/schedule/event/riscvdebian/)  
+Fedore: [https://fosdem.org/2019/schedule/event/riscvfedora/](https://fosdem.org/2019/schedule/event/riscvfedora/)
+
+
+### Buildroot
+
+Recently the open source project I am working on got report from a [buildroot](https://buildroot.org/) maintainer; I did not know this project before, but I pretty much liked it at first glance. It makes easy to do different kind of builds combining musl, glib or uclibc with a lot of packages. It does even has a CI testing different kind of configurations, which proves our software could compile for such setups.
+
+As of now it also supports risc-v, and it makes my job so much harder. I could simply configure the same way as linux kernel (menuconfig). There is still task to do, as I have a segfault to investigate in a few software.
+
+Materials: [https://fosdem.org/2019/schedule/event/riscvbuildroot/](https://fosdem.org/2019/schedule/event/riscvbuildroot/)
+
+
+### OpenSBI 
+
+Materials: [https://fosdem.org/2019/schedule/event/riscvsbi/](https://fosdem.org/2019/schedule/event/riscvsbi/)
+
+This is a straigth forward thing, somehow most people do not like the Berkly BootLoader (BBL), as it tends to be not so flexible. (I do not know better.) This initiative provides an alternative solution with possible plugin capability.
+
+The end of the presentation was a disaster, as it turned into a license flame war between BSD and GPL; that was my first live flamewar. They went on for a few minutes not letting the presenter finish his talk. It cannot be heared that well because the mic was only for the presenter.
+
+
+### Google Summer of Code meetup
+
+I had to cut short the day, as there was a planned meetup organized by google. They provided the place, beer, fries and burgers. I could not count the number of people, but the time was finite. I talked mostly with three persons from PostgreSQL, openstreetmap and GNU Radio. I was happy because at least on of them know what *syslog-ng* is, they actually using it to monitor their build infrastructure. It was a very basic usecase.
+
+The biggest topic was about openstreetmap using PostgreSQL and the way they are using, it was a very intense but rewarding discussion.
+
+Thanks Google organizing this event.
+
+## Day 2
+
+This day started well with some energy dring spilled into me at the tram. I have already left my room, and almost arrived at the conference; having extra t-shirt in my backpack I have decided to just quickly change, so nothing could come between me and the LLVM block.
+
+
+### Roll your own compiler
+
+Materials: [https://fosdem.org/2019/schedule/event/llvm_irgen/](https://fosdem.org/2019/schedule/event/llvm_irgen/)
+
+If you ever want to create your own language and you need a compiler fast; you could speed things up with LLVM. This talk is about bringing back *Module-2*. After some time of Bison/flex work this can be rewarding. Maybe I'll consider rewrite one of my compiler with LLVM.
+
+
+### BCC
+
+Materials: [https://fosdem.org/2019/schedule/event/llvm_bpf_rewriting/](https://fosdem.org/2019/schedule/event/llvm_bpf_rewriting/)
+
+I could only quote from the FOSDEM site: "The bcc project [1], mostly known for its collection of Linux tracing tools, is a framework to ease the development of BPF programs for Linux.". I could not understand most of the presentation, but it was good to make me look into the topic in details. 
+
+
+### Debug info improvement
+
+Materials: [https://fosdem.org/2019/schedule/event/llvm_debug/](https://fosdem.org/2019/schedule/event/llvm_debug/)
+
+This just tells a story how they ported a gcc feature into lldb, which can help deubbing source compiled with *-O2* or higher by walking the stack.
+
+
+### LLVM for the Apollo Guidance Computer
+
+Materials: [https://fosdem.org/2019/schedule/event/llvm_apollo/](https://fosdem.org/2019/schedule/event/llvm_apollo/)
+
+This is more like a fun hobby project rather then usefull, it tries to compile C program into the Apollo Guidance Computer's assembly language.
+This project is not complete.
+
+### syslog-ng with python
+
+Materials: [https://fosdem.org/2019/schedule/event/python_extending_syslog_ng/](https://fosdem.org/2019/schedule/event/python_extending_syslog_ng/)
+
+The last talk for me was about syslog-ng extension with python. The python is an easy way to make quick demos, or PoC works; but it can be suefficent to solve very specific problems as well.
+
+
+## Conclusion
+
+FOSDEM 2019 was as fun as last year, it has its difficulties the diversity of people and presentation make it worth participating. I hope next year I could participate as a presenter as well.
 
 
